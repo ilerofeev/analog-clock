@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #091921;
+    --backlight-color: rgba(47, 229, 184, 0.7);
+    --clock-color: #091921;
+    --light-shadow: rgba(255,255,255,.05);
+    --dark-shadow: rgba(0,0,0,.3);
+}
+.clock {
+    width: 90vw;
+    height: 90vw;
+    max-width: 350px;
+    max-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("clock.png");
+    background-size: cover;
+    background-color: var(--clock-color);
+    background-blend-mode: color-dodge;
+    border: 15px solid var(--clock-color);
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px var(--light-shadow),
+    0 15px 15px var(--dark-shadow),
+            inset 0 -15px 15px var(--light-shadow),
+    inset 0 15px 15px var(--dark-shadow);
+    transition: linear .3s;
+}
+.clock:hover {
+    transition: linear 0.03s;
+    background-blend-mode: luminosity;
+    box-shadow: 0 -15px 15px var(--light-shadow),
+    0 15px 15px var(--dark-shadow),
+    inset 0 -15px 15px var(--light-shadow),
+    inset 0 15px 15px var(--dark-shadow),
+    inset 0 0 10px var(--backlight-color), inset 0 0 90px var(--backlight-color);
+}
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 5;
+}
+.clock .hours, .clock .minutes, .clock .seconds {
+    position: absolute;
+}
+.clock .hours, .hh {
+    width: 150px;
+    height: 150px;
+}
+.clock .minutes, .mm {
+    width: 190px;
+    height: 190px;
+}
+.clock .seconds, .ss {
+    width: 230px;
+    height: 230px;
+}
+.hh, .mm, .ss {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.clock:hover .hh:before {
+    background: #ff105e;
+}
+.clock:hover .mm:before {
+    background: #fff;
+}
+.clock:hover .ss:before {
+    background: #fff;
+}
+.hh:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 80px;
+    background: rgba(255,16,94,.7);
+}
+.mm:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 90px;
+    background: rgba(255,255,255,.7);
+}
+.ss:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: rgba(255,255,255,.7);
+}
