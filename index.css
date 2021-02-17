@@ -48,7 +48,7 @@ body {
     position: absolute;
     width: 15px;
     height: 15px;
-    background: #fff;
+    background: #bebebe;
     border-radius: 50%;
     z-index: 5;
 }
@@ -86,19 +86,19 @@ body {
     position: absolute;
     width: 4px;
     height: 80px;
-    background: rgba(255,16,94,.7);
+    background: rgba(255,16,94,.4);
 }
 .mm:before {
     content: '';
     position: absolute;
     width: 3px;
     height: 90px;
-    background: rgba(255,255,255,.7);
+    background: #bebebe;
 }
 .ss:before {
     content: '';
     position: absolute;
     width: 2px;
     height: 150px;
-    background: rgba(255,255,255,.7);
+    background: #bebebe;
 }
