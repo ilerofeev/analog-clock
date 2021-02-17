@@ -52,6 +52,9 @@ body {
     border-radius: 50%;
     z-index: 5;
 }
+.clock:hover:before {
+    background: #fff;
+}
 .clock .hours, .clock .minutes, .clock .seconds {
     position: absolute;
 }
