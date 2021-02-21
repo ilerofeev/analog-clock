@@ -9,6 +9,8 @@
   <title>Analog clock</title>
 </head>
 <body>
+  <div class="reflect-wrapper">
+
   <div class="clock">
     <div class="hours">
       <div class="hh" id="hh"></div>
@@ -19,6 +21,7 @@
     <div class="seconds">
       <div class="ss" id="ss"></div>
     </div>
+  </div>
   </div>
   <script type="text/javascript">
     const deg = 6;
@@ -36,7 +39,6 @@
     mm.style.transform = `rotateZ(${m}deg)`
     ss.style.transform = `rotateZ(${s}deg)`
     }, 1000)
-
   </script>
 </body>
 </html>
